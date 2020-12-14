@@ -1,4 +1,4 @@
-// camelCase 
+// [x] camelCase 
 
 function cameCase(str) {
  return str.replace(/(?:^\w|[A-Z]|\b\w)/g, function(word, index) {
@@ -12,7 +12,8 @@ console.log(cameCase("equipment class name"));
 console.log(cameCase("Equipment Class Name"));
 
 
-// find next higher number with same digits
+
+// [x] find next higher number with same digits
 
 function nextBigger(n) {
   let d = n.toString().split('');
@@ -58,4 +59,23 @@ function nextBigger(n) {
   return ret;
 }
 
-console.log(nextBigger(21581957621))
+console.log(nextBigger(21581957621));
+
+
+
+
+// [x] Missing digits
+
+let missingNumber = function(num) {
+  const length = num.length;
+  let sum = ((length + 1) *  length) / 2;
+  
+  for (let i = 0; i < length; i++) {
+     sum = sum - num[i];    
+  }
+  return sum;
+}
+
+
+
+
